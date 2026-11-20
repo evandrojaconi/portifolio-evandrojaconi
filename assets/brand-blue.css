@@ -1,0 +1,67 @@
+/* Evandro Jaconi — identidade azul compartilhada com propostas comerciais.
+   Mudança exclusivamente visual: temas, cores, tipografia e componentes.
+   Versão 2026-11-20. */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root{
+  --ink:#f4f7ff;
+  --muted:#b9c9e4;
+  --soft:#a0b5d5;
+  --bg:#0b1f43;
+  --bg2:#102b56;
+  --panel:#173461;
+  --border:#35527d;
+  --accent:#9ab5ff;
+  --sage:#bcd1ff;
+  --paper:#f4f7ff;
+  --brand-blue:#3859f7;
+  --shadow:0 20px 55px rgba(2,12,32,.29);
+  --radius:16px;
+}
+:root[data-theme=light]{
+  --ink:#10284d;
+  --muted:#526783;
+  --soft:#607895;
+  --bg:#f4f7ff;
+  --bg2:#e8efff;
+  --panel:#fff;
+  --border:#d6e2f8;
+  --accent:#2851cf;
+  --sage:#2e58a5;
+  --paper:#fff;
+  --brand-blue:#3859f7;
+  --shadow:0 16px 38px rgba(20,50,104,.09);
+  color-scheme:light;
+}
+body{font-family:'DM Sans',Inter,ui-sans-serif,system-ui,-apple-system,'Segoe UI',Arial,sans-serif}
+h1,h2,h3,h4,.brand,.stat strong,.cert-summary strong,.profile-mark{font-family:Manrope,'DM Sans',sans-serif}
+h1,h2,h3{letter-spacing:-.055em}
+.site-header{background:color-mix(in srgb,var(--bg) 94%,transparent)}
+.mark{background:var(--brand-blue);color:#fff;border-radius:7px}
+.progress div{background:var(--brand-blue)}
+.hero{background:radial-gradient(ellipse 55% 65% at 93% 30%,rgba(56,89,247,.14),transparent 74%)}
+:root[data-theme=light] .hero{background:radial-gradient(ellipse 55% 65% at 93% 30%,rgba(56,89,247,.07),transparent 74%)}
+.btn{border-radius:8px}
+.btn.primary,.filter.on,.toggle button.active{background:var(--brand-blue);border-color:var(--brand-blue);color:#fff}
+.btn.primary:hover,.filter.on:hover{background:#496bff;border-color:#496bff}
+.visual-badge{background:var(--brand-blue);color:#fff;border-radius:9px}
+.count{background:rgba(8,28,62,.91);border-color:#7395dc;color:#fff}
+.hero-visual{background:linear-gradient(145deg,var(--panel),var(--bg2));border-radius:18px}
+.stat-strip,.cert-summary{border-radius:14px}
+.card,.step,.linkcard,.media-card,.timeline-panel,.profile-panel,.cert-card,.chart-card,.field-pic,.editorial .photo{border-radius:14px}
+.iconbtn{border-radius:8px}
+.linkcard:hover,.media-card:hover,.field-pic:hover,.cert-actions a:hover{border-color:var(--brand-blue)}
+.bar{background:var(--brand-blue)}
+.bar.sage{background:#82a9ff}
+.timeline button.on{border-color:var(--brand-blue);background:color-mix(in srgb,var(--brand-blue) 12%,var(--panel))}
+.certification-section{background:var(--bg2)}
+.lightbox{background:rgba(3,15,39,.95)}
+.lightbox .lb-caption{color:#dfeaff}
+.light-close,.light-prev,.light-next{background:rgba(8,30,68,.85);border-color:#5374ab;color:#fff}
+:root[data-theme=light] .about-me{background:linear-gradient(155deg,#e8efff,#f4f7ff)}
+:root:not([data-theme=light]) .about-me{background:linear-gradient(155deg,#112e5c,#0b1f43)}
+:root[data-theme=light] .bar.sage{background:#6994f5}
+:root[data-theme=light] .count{background:rgba(9,37,80,.88)}
+/* Hover and keyboard navigation remain visible on both backgrounds. */
+a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--brand-blue);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){.btn,.media-card{transition:none}}
